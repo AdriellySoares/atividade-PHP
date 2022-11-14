@@ -36,5 +36,5 @@ $resultado = $mysqli->query($leitura);
         </thead>
     </table>
 </body>
-
+<!--  -->
 </html>
