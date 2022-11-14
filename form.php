@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Cadastro de produtos</h1>
+    <a href="./index.php"><button class="btn btn-success">Voltar a Pagina Inicial</button></a>
     <form action="post.php" method="POST">
         <div class="form-group row">
             <label for="nome" class="col-sm-2 col-form-label">Nome do Produto</label>

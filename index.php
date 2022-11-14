@@ -12,6 +12,7 @@ $resultado = $mysqli->query($leitura);
 </head>
 <body>
     <h1 class="center">Tabela de produtos</h1>
+    <a href="./post.php"><button class="btn btn-success">Cadastrar Novo Produto</button></a>
     <table class="table table-striped table-hover">
         <thead class="table-dark">
             <tr>
