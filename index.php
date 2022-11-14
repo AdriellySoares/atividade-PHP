@@ -1,4 +1,4 @@
-<?php include("config/database.php");
+<?php include("./config/database.php");
 $leitura = "SELECT * FROM produtos";
 $resultado = $mysqli->query($leitura);
 ?>
@@ -8,7 +8,7 @@ $resultado = $mysqli->query($leitura);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabela de produtos</title>
 </head>
 <body>
     <h1 class="center">Tabela de produtos</h1>
