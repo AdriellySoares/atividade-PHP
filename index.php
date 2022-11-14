@@ -20,6 +20,7 @@ $resultado = $mysqli->query($leitura);
                 <th>Nome</th>
                 <th>Categoria</th>
                 <th>Valor(R$)</th>
+                <th>Ações</th>
             </tr>
             <tbody>
                 <?php 
@@ -29,6 +30,12 @@ $resultado = $mysqli->query($leitura);
                         <td>{$produto['nome']}</td>
                         <td>{$produto['categoria']}</td>
                         <td>{$produto['valor']}</td>
+                        <td>
+                            <div class='d-flex'>
+                                <button class='btn btn-warning me-2'>Editar</button>
+                                <button class='btn btn-danger'>Excluir</button>
+                            </div>
+                        </td>
                         </tr>";
                     }
                 ?>
