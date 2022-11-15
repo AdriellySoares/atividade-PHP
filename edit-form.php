@@ -27,7 +27,7 @@
         <div class="form-group row">
             <label for="valor" class="col-sm-2 col-form-label">Valor(R$)</label>
             <div class="col-sm-10">
-                <input name="valor" type="number" pattern="(.[0-9]){3,}" class="form-control" id="valor" placeholder="Valor" value="<?php echo $produto['valor']?>">
+                <input name="valor" type="text" pattern="([0-9]){2,}" class="form-control" id="valor" placeholder="Valor" value="<?php echo $produto['valor']?>">
             </div>
         </div>
         <div>
