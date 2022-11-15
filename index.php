@@ -32,8 +32,8 @@ $resultado = $mysqli->query($leitura);
                         <td>{$produto['valor']}</td>
                         <td>
                             <div class='d-flex'>
-                                <button class='btn btn-warning me-2'>Editar</button>
-                                <button class='btn btn-danger'>Excluir</button>
+                                <a href='put.php?codigo=<?php echo {$produto["idprodutos"]} ?>'><button class='btn btn-warning me-2'>Editar</button></a>
+                                <a href='excluir.php?codigo=<?php echo {$produto["idprodutos"]} ?>'><button class='btn btn-danger'>Excluir</button></a>
                             </div>
                         </td>
                         </tr>";

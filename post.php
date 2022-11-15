@@ -6,9 +6,9 @@ if(isset($_POST['cadastrar'])){
     $valor = $_POST['valor'];
     $query = mysqli_query($mysqli, "INSERT INTO produtos(nome, categoria, valor)VALUES('$nome','$categoria','$valor')");
     if($query){
-        echo "Cadastro efetuado com sucesso";
+        echo "<h1>Cadastro efetuado com sucesso</h1>";
     }else{
-        echo "Deu ruim";
+        echo "<h1>Deu ruim</h1>";
     }
 }
-include "form.php";
+include "create-form.php";
