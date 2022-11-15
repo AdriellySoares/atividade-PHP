@@ -1,6 +1,7 @@
 <?php
 include("./config/database.php");
 if (isset($_GET['id'])) {
+    try{
     if (isset($_POST['editar'])) {
         $nome = $_POST['nome'];
         $categoria = $_POST['categoria'];
@@ -14,5 +15,9 @@ if (isset($_GET['id'])) {
     foreach($result as $prod){
         $produto = $prod;
     }
+}catch(mysqli_sql_exception $e){
+    var_dump($e);
+    exit;
+}
 }
 include "edit-form.php";
