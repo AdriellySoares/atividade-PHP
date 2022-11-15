@@ -8,7 +8,7 @@ if (isset($_GET['idprodutos'])) {
         $put = "UPDATE produtos SET nome ='{$nome}', categoria ='{$categoria}, valor ='{$valor}' WHERE idprodutos ='". $_GET['id']."'";
         mysqli_query($mysqli, $put);
     }
-    $query = 'SELECT * FROM produtos WHERE idprodutos ='.$_GET['id'];
+    $query = 'SELECT * FROM produtos WHERE idprodutos ='.$_GET['idprodutos'];
     $result = $mysqli->query($query);
     $produto;
     foreach($result as $prod){
