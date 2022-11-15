@@ -1,6 +1,6 @@
 <?php
 include("./config/database.php");
-if (isset($_GET['idprodutos'])) {
+if (isset($_GET['id'])) {
     if (isset($_POST['editar'])) {
         $nome = $_POST['nome'];
         $categoria = $_POST['categoria'];
@@ -8,7 +8,7 @@ if (isset($_GET['idprodutos'])) {
         $put = "UPDATE produtos SET nome ='{$nome}', categoria ='{$categoria}, valor ='{$valor}' WHERE idprodutos ='". $_GET['id']."'";
         mysqli_query($mysqli, $put);
     }
-    $query = 'SELECT * FROM produtos WHERE idprodutos ='.$_GET['idprodutos'];
+    $query = 'SELECT * FROM produtos WHERE idprodutos ='.$_GET['id'];
     $result = $mysqli->query($query);
     $produto;
     foreach($result as $prod){
