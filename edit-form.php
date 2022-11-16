@@ -11,7 +11,7 @@
         <h1>Editar produtos</h1>
         <a href="./index.php"><button class="btn btn-success">Voltar a Pagina Inicial</button></a>
     </div>
-    <form method="POST" action="put.php??id=<?php echo $_GET['id'];?>">
+    <form method="POST" action="put.php?id=<?php echo $_GET['id'];?>">
         <div class="form-group row">
             <label for="nome" class="col-sm-2 col-form-label">Nome do Produto</label>
             <div class="col-sm-10">

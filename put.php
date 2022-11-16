@@ -6,10 +6,10 @@ if (isset($_GET['id'])) {
         $nome = $_POST['nome'];
         $categoria = $_POST['categoria'];
         $valor = $_POST['valor'];
-        $post = "UPDATE produtos SET nome ='{$nome}', categoria ='{$categoria}, valor ='{$valor}' WHERE idprodutos ='". $_GET['id']."'";
+        $post = "UPDATE produtos SET nome ='{$nome}', categoria ='{$categoria}', valor ='{$valor}' WHERE idprodutos =". "'".$_GET['id']."'";
         mysqli_query($mysqli, $post);
     }
-    $query = 'SELECT * FROM produtos WHERE idprodutos ='.$_GET['id'];
+    $query = "SELECT * FROM produtos WHERE idprodutos ='".$_GET['id']."'";
     $result = $mysqli->query($query);
     $produto;
     foreach($result as $prod){
