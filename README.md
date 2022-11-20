@@ -2,7 +2,7 @@
 \php -S localhost:(porta desejada);
 
 ## Criação do banco de dados:
-É somente copiar o conteúdo de alunos.sql e rodar no workbench ou shell do MySQL,
+É somente copiar o conteúdo de db.sql e rodar no workbench ou shell do MySQL,
 para que possa realizar a criação da tabela.
 
 Para rodar no seu proprio banco de dados altere as variaveis no arquivo config.php no seu host em "$dbhost", nome de usuario em "$dbusername" e com sua senha pessoal em "$dbpassword".
