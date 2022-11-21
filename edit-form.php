@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de cadastro</title>
+    <title>Formulario de edição</title>
 </head>
 <body>
-    <h1>Cadastro de produtos</h1>
-    <a href="./index.php"><button class="btn btn-success">Voltar a Pagina Inicial</button></a>
-    <form action="post.php" method="POST">
+    <div class="d-flex flex column align-items-center">
+        <h1>Editar produtos</h1>
+        <a href="./index.php"><button class="btn btn-success">Voltar a Pagina Inicial</button></a>
+    </div>
+    <form method="POST" action="put.php?id=<?php echo $_GET['id'];?>">
         <div class="form-group row">
             <label for="nome" class="col-sm-2 col-form-label">Nome do Produto</label>
             <div class="col-sm-10">
-                <input type="text" pattern="(?=.*[A-Z])(?=.*[a-z]){3,}" class="form-control-plaintext" name="nome" id="nome" placeholder="Nome do Produto">
+                <input type="text" pattern="(?=.*[A-Z])(?=.*[a-z]){3,}" class="form-control" name="nome" id="nome" placeholder="Nome do Produto" value="<?php echo $produto['nome']?>">
             </div>
         </div>
         <div class="form-group row">
             <label for="categoria" class="col-sm-2 col-form-label">Categoria</label>
             <div class="col-sm-10">
-                <input name="categoria" type="text" pattern="(?=.*[A-Z])(?=.*[a-z]){2,}" class="form-control-plaintext" id="categoria" placeholder="Categoria">
+                <input name="categoria" type="text" pattern="(?=.*[A-Z])(?=.*[a-z]){2,}" class="form-control" id="categoria" placeholder="categoria" value="<?php echo $produto['categoria']?>">
             </div>
         </div>
         <div class="form-group row">
             <label for="valor" class="col-sm-2 col-form-label">Valor(R$)</label>
             <div class="col-sm-10">
-                <input name="valor" type="number" pattern="(.[0-9]){3,}" class="form-control-plaintext" id="valor" placeholder="Valor">
+                <input name="valor" type="text" pattern="([0-9]){2,}" class="form-control" id="valor" placeholder="Valor" value="<?php echo $produto['valor']?>">
             </div>
         </div>
         <div>
-            <button class="btn btn-primary" name="cadastrar" id="cadastrar" type="submit">Enviar</button>
+            <button class="btn btn-primary" name="editar" id="editar" type="submit">Editar</button>
         </div>
     </form>
 </body>

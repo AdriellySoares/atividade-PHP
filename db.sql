@@ -3,7 +3,7 @@ CREATE TABLE `digitalcommerce`.`produtos` (
   `idprodutos` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(55) NOT NULL,
   `categoria` VARCHAR(55) NOT NULL,
-  `valor` INT NOT NULL,
+  `valor` VARCHAR(55) NOT NULL,
   PRIMARY KEY (`idprodutos`),
   UNIQUE INDEX `idprodutos_UNIQUE` (`idprodutos` ASC) VISIBLE);
 INSERT INTO `digitalcommerce`.`produtos` (`idprodutos`, `nome`, `categoria`, `valor`) VALUES ('1', 'Monitor', 'eletronicos', '500');
